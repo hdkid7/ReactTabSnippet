@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import { motion } from "framer-motion";
 import { jsx, css } from "@emotion/core";
 /** @jsx jsx */
 
@@ -13,6 +13,22 @@ const tabContents = css`
   grid-auto-flow: dense;
 `;
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3
+    }
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren"
+    }
+  }
+};
+
 // eslint-disable-next-line react/prop-types
 const TabContent = ({ children }) => (
   <div
@@ -24,7 +40,14 @@ const TabContent = ({ children }) => (
       margin: auto;
     `}
   >
-    <div css={tabContents}>{children}</div>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={list}
+      css={tabContents}
+    >
+      {children}
+    </motion.div>
   </div>
 );
 

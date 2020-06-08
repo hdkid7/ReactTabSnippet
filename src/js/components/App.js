@@ -46,23 +46,22 @@ const OverlayProfile = ({ name, profession, overlaySummary, image }) => {
     </Fragment>
   );
 };
-
 const ctaArray = [
   "Tab Name",
   "Faculty",
-  `64e46e18a631d1b8c734ef25c84d5cfd.jpg`,
+  `j.jpg`,
   "Lydia Franco-Hodges",
   "Assistant Professor of Practice",
   "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-  "64e46e18a631d1b8c734ef25c84d5cfd.jpg",
+  "j.jpg",
   "John Doe",
   "This is 2021",
   "Summary LOL",
-  "64e46e18a631d1b8c734ef25c84d5cfd.jpg",
+  "j3.jpg",
   "John Doe",
   "This is 2021",
   "Summary LOL",
-  "64e46e18a631d1b8c734ef25c84d5cfd.jpg",
+  "j2.jpg",
   "John Doe",
   "This is 2021",
   "Summary LOL",
@@ -85,8 +84,8 @@ const ctaArray = [
   "This is 2021",
   "Summary LOL"
 ];
-
 const keys = ["Tab Name"];
+// eslint-disable-next-line no-undef
 const result = ctaArray.reduce(
   // eslint-disable-next-line no-unused-vars
   (i => (r, s) => {

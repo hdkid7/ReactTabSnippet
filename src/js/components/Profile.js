@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,11 +30,16 @@ const textStyle = css`
   font-size: 1rem;
 `;
 
+const item = {
+  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -100 }
+};
+
 // eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line react/prop-types
 const Profile = ({ name, profession, click, img }) => {
   return (
-    <div css={container} onClick={() => click()}>
+    <motion.div variants={item} css={container} onClick={() => click()}>
       <img css={imgStyle} src={img} />
       <div css={textStyle}>
         <p
@@ -63,7 +68,7 @@ const Profile = ({ name, profession, click, img }) => {
           {profession}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

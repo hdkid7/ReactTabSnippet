@@ -13,6 +13,7 @@
     "babel-plugin-emotion": "^10.0.33",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.2.0",
+    "framer-motion": "^1.11.0",
     "prettier-webpack-plugin": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
